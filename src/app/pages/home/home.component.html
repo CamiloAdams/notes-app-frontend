@@ -1,0 +1,61 @@
+<mat-toolbar class="nav-color" color='#fefaf1'>
+  <span class="nav-logo">Notes App</span>
+  <span class="example-spacer"></span>
+  <button mat-button (click)='openSingUp()'>Singup</button>
+  <button mat-flat-button color="primary" (click)='openLogin()'>Login</button>
+</mat-toolbar>
+<div class="landing-page-container">
+  <h1>Welcome to Notes App</h1>
+  <p>Take notes, organize your ideas, and stay productive with our easy-to-use note-taking app.</p>
+  <button mat-raised-button (click)='openSingUp()' color="primary" routerLink="/notes">Get Started</button>
+</div>
+
+<div class="spacer layer1"></div>
+
+<div class="features-container colored-primary-section">
+  <h2>Features</h2>
+  <div class="feature-card selected-card">
+    <mat-icon>edit</mat-icon>
+    <h3>Easy Note-Taking</h3>
+    <p>Create and edit notes quickly and easily with our intuitive interface.</p>
+  </div>
+  <div class="feature-card selected-card">
+    <mat-icon>folder</mat-icon>
+    <h3>Organize Your Notes</h3>
+    <p>Keep your notes organized with tags.</p>
+  </div>
+  <div class="feature-card selected-card">
+    <mat-icon>search</mat-icon>
+    <h3>Find What You Need</h3>
+    <p>Quickly find the notes you need with our powerful search feature.</p>
+  </div>
+</div>
+
+<div class="spacer simple-wave"></div>
+
+<div class="cta-container">
+  <h2>Ready to Get Started?</h2>
+  <button mat-raised-button color="primary" (click)='openSingUp()' routerLink="/notes">Create an Account</button>
+  <p>Already have an account? <a  (click)='openLogin()'>Log in</a> to start taking notes.</p>
+</div>
+
+
+<div class="spacer inverted-simple-wave"></div>
+
+<section class="authors-container">
+  <h2>Authors</h2>
+  <div class="author-card">
+    <img src="../../../assets/authors/author1.jpg" alt="Author 1">
+    <h3>Camilo</h3>
+    <p>Developer</p>
+  </div>
+  <div class="author-card">
+    <img src="../../../assets/authors/author2.jpg" alt="Author 2">
+    <h3>Carlos</h3>
+    <p>Developer</p>
+  </div>
+</section>
+
+<footer class="footer-container">
+  <p>&copy; 2023 Notes App. All rights reserved. | <a href="https://github.com/CamiloAdams">GitHub</a></p>
+</footer>

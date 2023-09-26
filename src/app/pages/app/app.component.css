@@ -1,0 +1,114 @@
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+/* Search box */
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box input {
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  padding: 8px;
+  font-size: 16px;
+  width: 90%;
+  color: #333;
+}
+
+.search-box input:focus {
+  outline: none;
+  background-color: #f5f5f5;
+}
+
+.search-box button {
+  margin-left: 8px;
+  color: #666;
+  background-color: transparent;
+  border: none;
+}
+
+.search-box button:hover {
+  color: #333;
+}
+.search-box mat-icon {
+  color: #ccc;
+  margin-right: 8px;
+}
+/* Material cards */
+.example-spacer {
+  flex: 1 1 auto;
+}
+.nav-logo {
+  margin: 0 auto;
+  padding-left: 2%;
+}
+
+.example-card {
+  height: 90%;
+  width: 90%;
+}
+
+.content {
+  overflow: hidden;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-card-actions {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.action-button {
+  position: fixed;
+  right: 2rem;
+  transition-property: opacity;
+}
+
+.menu-button {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+}
+/* For mobile devices */
+
+
+
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+.mat-grid-list {
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  }
+
+  .mat-grid-tile {
+    padding: 8px;
+  }
+
+  .nav-logo {
+    padding-left: 0;
+  }
+
+  .example-card {
+    height: auto;
+    width: 100%;
+  }
+
+  .action-button {
+    right: 1rem;
+  }
+
+  .menu-button {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}

@@ -1,0 +1,74 @@
+<mat-toolbar color="primary" class="nav-bar">
+  <span class="nav-logo">Notes App</span>
+  <span class="example-spacer"></span>
+  <button mat-button (click)="logout()" matTooltip="Logout">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-form-field class="search-box">
+   <mat-icon matPrefix>search</mat-icon>
+  <input id="search-box" matInput placeholder="Search" (keyup)="applyFilter($event)">
+<button matSuffix mat-icon-button aria-label="Clear" (click)="clearFilter()">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+
+<mat-grid-list [cols]="mybreakpoint" rowHeight="3:2" (window:resize)="handleSize($event)">
+  <mat-grid-tile *ngFor="let note of filteredNotes" colspan="1" rowspan="1">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{ note.title }}</mat-card-title>
+
+        <mat-card-subtitle>{{
+          dateService.convertDate(note.updatedAt || "")
+        }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content fxFlex class="content">
+        <p>{{ note.content }}</p>
+      </mat-card-content>
+      <div class="spacer"></div>
+      <mat-card-actions fxFlexAlign="end" align="end">
+        <button
+          mat-icon-button
+          matTooltip="Open"
+          (click)="openNote(note._id ?? '')"
+        >
+          <mat-icon>open_in_new</mat-icon>
+        </button>
+
+        <button
+          mat-icon-button
+          matTooltip="Edit"
+          (click)="updateNote(note._id ?? '')"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+
+        <div class="spacer"></div>
+
+        <button
+          mat-icon-button
+          color="warn"
+          matTooltip="Delete"
+          (click)="deleteNote(note._id ?? '')"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+      <mat-card-footer> </mat-card-footer>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<div class="menu-button">
+  <button
+    mat-fab
+    color="primary"
+    matTooltip="Add"
+    aria-label="Example icon button with a delete icon"
+    (click)="createNote()"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

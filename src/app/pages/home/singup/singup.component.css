@@ -1,0 +1,21 @@
+.ancho {
+  width: 90%;
+}
+
+.form-title {
+  text-align: center;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.close-button{
+  float: right;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.close-icon {
+  transition: 1s ease-in-out;
+}

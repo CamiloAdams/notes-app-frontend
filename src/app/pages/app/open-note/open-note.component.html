@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>{{ dateService.convertDate(data.updatedAt || "") }}</h3>
+  <p class="text-color">
+    {{ data.content }}
+  </p>
+</mat-dialog-content>
+<mat-dialog-actions fxFlexAlign="end" align="end">
+  <button mat-stroked-button (click)="onNoClick()">Close</button>
+</mat-dialog-actions>

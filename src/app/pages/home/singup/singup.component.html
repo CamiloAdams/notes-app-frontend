@@ -1,0 +1,94 @@
+<button mat-icon-button class="close-button" align="end" (click)="onNoClick()">
+  <mat-icon class="" align="end">close</mat-icon>
+</button>
+<h2 mat-dialog-title class="form-title">Singup</h2>
+<div mat-dialog-content>
+  <form [formGroup]="form">
+    <mat-form-field class="">
+      <mat-label>Username</mat-label>
+      <input matInput autocomplete="off" formControlName="username" />
+      <div
+        *ngIf="
+          form.controls['username'].invalid &&
+          (form.controls['username'].dirty || form.controls['username'].touched)
+        "
+        class="alert alert-danger"
+      >
+        <mat-error *ngIf="customError('username', 'required')"
+          >Username is required</mat-error
+        >
+        <mat-error *ngIf="customError('username', 'maxlength')"
+          >Limit exceed</mat-error
+        >
+      </div>
+    </mat-form-field>
+
+    <mat-form-field class="">
+      <mat-label>Email</mat-label>
+      <input matInput autocomplete="off" formControlName="email" />
+      <div
+        *ngIf="
+          form.controls['email'].invalid &&
+          (form.controls['email'].dirty || form.controls['email'].touched)
+        "
+        class="alert alert-danger"
+      >
+        <mat-error *ngIf="customError('email', 'required')"
+          >Email is required</mat-error
+        >
+        <mat-error *ngIf="customError('email', 'pattern')"
+          >Invalid email format</mat-error
+        >
+      </div>
+    </mat-form-field>
+
+    <mat-form-field class="">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        autocomplete="off"
+        [type]="hide ? 'password' : 'text'"
+        formControlName="password"
+      />
+      <mat-icon matSuffix (click)="hide = !hide">{{
+        hide ? "visibility_off" : "visibility"
+      }}</mat-icon>
+      <div
+        *ngIf="
+          form.controls['password'].invalid &&
+          (form.controls['password'].dirty || form.controls['password'].touched)
+        "
+        class="alert alert-danger"
+      >
+        <mat-error *ngIf="customError('password', 'required')"
+          >Password is required</mat-error
+        >
+        <mat-error *ngIf="customError('password', 'pattern')"
+          >The password must contain at least one lowercase letter, one
+          uppercase letter, one number, one special character and have a minimum
+          length of 8</mat-error
+        >
+      </div>
+    </mat-form-field>
+    <br />
+  </form>
+</div>
+<div mat-dialog-actions align="end">
+  <button
+    type="submit"
+    [disabled]="form.invalid"
+    (click)="singup()"
+    mat-raised-button
+    color="primary"
+  >
+    Singup
+  </button>
+  <button
+    mat-stroked-button
+    (click)="openLogin()"
+    color="basic"
+    style="margin-right: 15px"
+  >
+    Login
+  </button>
+</div>

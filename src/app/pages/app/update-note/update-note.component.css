@@ -1,0 +1,10 @@
+input:disabled {
+  color: black;
+}
+.ancho {
+  width: 70%;
+}
+
+mat-form-field {
+  width: 100%;
+}

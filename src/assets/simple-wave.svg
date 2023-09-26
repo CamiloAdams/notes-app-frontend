@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="960" height="200" viewBox="0 0 960 200" xml:space="preserve">
+<desc>Created with Fabric.js 5.2.4</desc>
+<defs>
+</defs>
+<rect x="0" y="0" width="100%" height="100%" fill="transparent"></rect>
+<g transform="matrix(0 0 0 0 0 0)" id="069a3329-d80e-4418-9a98-009efdb77d1e"  >
+</g>
+<g transform="matrix(1 0 0 1 480 100)" id="df941431-9006-4172-b368-f0d35ac51355"  >
+<rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;" vector-effect="non-scaling-stroke"  x="-480" y="-100" rx="0" ry="0" width="960" height="200" />
+</g>
+<g transform="matrix(1 0 0 1 480 100)"  >
+<g style="" vector-effect="non-scaling-stroke"   >
+		<g transform="matrix(1 0 0 1 0 0)"  >
+<rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(254,250,241); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  x="-480" y="-150" rx="0" ry="0" width="960" height="300" />
+</g>
+		<g transform="matrix(1 0 0 1 0 -57.77)"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(126,87,194); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-480, -92.23)" d="M 0 152 L 22.8 147.5 C 45.7 143 91.3 134 137 131 C 182.7 128 228.3 131 274 137.3 C 319.7 143.7 365.3 153.3 411.2 161.5 C 457 169.7 503 176.3 548.8 180.8 C 594.7 185.3 640.3 187.7 686 175.5 C 731.7 163.3 777.3 136.7 823 126.2 C 868.7 115.7 914.3 121.3 937.2 124.2 L 960 127 L 960 0 L 937.2 0 C 914.3 0 868.7 0 823 0 C 777.3 0 731.7 0 686 0 C 640.3 0 594.7 0 548.8 0 C 503 0 457 0 411.2 0 C 365.3 0 319.7 0 274 0 C 228.3 0 182.7 0 137 0 C 91.3 0 45.7 0 22.8 0 L 0 0 Z" stroke-linecap="round" />
+</g>
+</g>
+</g>
+</svg>

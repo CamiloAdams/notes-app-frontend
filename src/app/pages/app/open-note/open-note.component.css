@@ -1,0 +1,26 @@
+input:disabled {
+  color: black;
+}
+.ancho {
+  width: 70%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.text-color{
+  color: black;
+}
+mat-dialog-actions {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.action-button {
+  position: fixed;
+  right: 2rem;
+  transition-property: opacity;
+}
+
+
