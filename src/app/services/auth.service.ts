@@ -4,6 +4,7 @@ import {
   HttpErrorResponse,
   HttpHeaders,
 } from "@angular/common/http";
+import axios from "axios";
 import { catchError, Observable, throwError } from "rxjs";
 import { Login } from "../interfaces/login";
 import { Singup } from "../interfaces/singup";
@@ -12,13 +13,14 @@ import { Singup } from "../interfaces/singup";
   providedIn: "root",
 })
 export class AuthService {
-  headers = new HttpHeaders().set("Content-Type", "application/json");
-  // private apiUrl = "http://localhost:3000/api/auth/";
-  private apiUrl = "http://18.222.39.99:3000/api/auth/";
+  headers = {"Content-Type": "application/json"};
+  // private apiUrl = "https://localhost:3001/api/auth/";
+  private apiUrl = "https://notesapp.website:3001/api/auth/";
   constructor(private http: HttpClient) {}
 
   async login(login: Login): Promise<any> {
-    return this.http.post(this.apiUrl + 'login', login).pipe(catchError(this.error)).toPromise();
+    return axios.post(this.apiUrl + 'login', login, { headers: this.headers});
+    // return this.http.post(this.apiUrl + 'login', login, {withCredentials: true}).pipe(catchError(this.error)).toPromise();
   }
 
 async singup(data: Singup): Promise<any> {

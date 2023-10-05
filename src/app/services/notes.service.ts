@@ -18,7 +18,7 @@ export class NotesService {
   };
   // private apiUrl = "http://localhost:3000/api/notes/";
 
-  private apiUrl = "http://18.222.39.99:3000/api/notes/";
+  private apiUrl = "https://notesapp.website:3001/api/notes/";
   constructor(private http: HttpClient) {}
 
   getNotes() {

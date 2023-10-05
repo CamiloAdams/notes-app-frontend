@@ -21,6 +21,7 @@ import { CreateNoteComponent } from './create-note/create-note.component';
 import { UpdateNoteComponent } from './update-note/update-note.component';
 import { DateService } from 'src/app/services/date.service';
 import { DeleteNoteComponent } from './delete-note/delete-note.component';
+import { CookiesService } from 'src/app/services/cookies.service';
 export interface Tile {
   color: string;
   cols: number;
@@ -40,6 +41,7 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     private _notesService: NotesService,
+    private _cookieService: CookiesService,
     private _snackBar: MatSnackBar,
     public dateService: DateService,
     private dialog: MatDialog
@@ -71,8 +73,7 @@ export class AppComponent implements OnInit {
 
   createNote() {
     this.dialog
-      .open(CreateNoteComponent, {
-      })
+      .open(CreateNoteComponent, {})
       .afterClosed()
       .subscribe((val) => {
         if (val === 'update') {
@@ -148,12 +149,12 @@ export class AppComponent implements OnInit {
 
   logout() {
     localStorage.removeItem('token');
-
+    this._cookieService.deleteAllCookies();
     this.router.navigate(['home']);
   }
 
   handleSize(event: Event) {
     const target = event.target as Window;
-    this.mybreakpoint = (target.innerWidth <= 600) ? 1 : 4;
+    this.mybreakpoint = target.innerWidth <= 600 ? 1 : 4;
   }
 }
